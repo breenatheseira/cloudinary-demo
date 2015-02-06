@@ -13,5 +13,10 @@
     <hr/>
     
     -> Choose your file to upload!!
+    <%= form_for @image do |f| %>
+        Name: <%= f.text_field :name %> <br/>
+        Image: <%= f.file_field :avatar %><br/>
+        <%= f.submit %>
+    <% end %>
     
 </p>
