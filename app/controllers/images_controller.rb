@@ -12,8 +12,16 @@ class ImagesController < ApplicationController
         # uploader.store!(@image.avatar)
 
         if @image.save
+        #     Cloudinary::Uploader.upload(params[@image.avatar])
+        #   render upload_image(@image)
             redirect_to image_path(@image)
         end
+    end
+    
+    def upload_image(image)
+        @image = image
+        # Cloudinary::Uploader.upload("http://cloudinary-breenatheseira.c9.io" + @image.avatar_url)
+        # redirect_to image_path(@image)
     end
     
     def show
@@ -23,6 +31,6 @@ class ImagesController < ApplicationController
     end
     
     def image_params
-        params.require(:image).permit(:name,:avatar,:image_cache)
+        params.require(:image).permit(:name,:avatar,:image_cache, short_name)
     end
 end
