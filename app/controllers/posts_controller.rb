@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    require 'carrierwave/orm/activerecord'
     def index
         @posts = Post.all
     end

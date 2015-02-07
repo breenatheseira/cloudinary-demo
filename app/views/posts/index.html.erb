@@ -1,7 +1,7 @@
 <h1>Index</h1>
 
-<%= @posts.each do |p| %>
-    <%= image_tag(p.picture) %> &nbsp;
+<% @posts.each do |p| %>
+    <%= image_tag(p.picture_url) %> &nbsp;
 <% end %>
 <br/>
 <%= link_to "New Post", new_post_path %>
