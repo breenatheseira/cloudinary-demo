@@ -40,4 +40,5 @@ gem 'spring',        group: :development
 
 group :development do
     gem 'carrierwave'
+    gem 'cloudinary'
 end
