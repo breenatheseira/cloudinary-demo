@@ -16,3 +16,6 @@
 /tmp
 
 /.c9/*
+/public
+/spring
+/config/cloudinary.yml
