@@ -16,12 +16,6 @@
 /tmp
 
 /.c9/*
-<<<<<<< HEAD
-/config/cloudinary.yml
-/spring
-/public
-=======
+
 /public
 /spring
-/config/cloudinary.yml
->>>>>>> origin/Cloud
