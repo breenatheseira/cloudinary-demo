@@ -1,0 +1,9 @@
+<h1>New Post</h1>
+
+<%= form_for @post do |f| %>
+    <%= f.file_field :picture %>
+    <br/>
+    <%= f.hidden_field :picture_cache %>
+    <br/>
+    <%= f.submit %>
+<% end %>
