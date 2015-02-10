@@ -1,7 +1,14 @@
-<h1>Index</h1>
-
-<% @posts.each do |p| %>
-    <%= image_tag(p.picture_url) %> &nbsp;
-<% end %>
-<br/>
-<%= link_to "New Post", new_post_path %>
+<div class="container">
+	<h1>Index</h1>		
+		<div class="well">
+			<div class="row">
+				<% @posts.each do |p| %>
+					<div class="col-md-3">
+						<%= image_tag(p.picture_url, height: '200',class: "thumbnail")  %>
+					</div>
+				<% end %>
+			</div>
+		</div>	
+	<br/>
+	<%= link_to "New Post", new_post_path, class: "btn btn-default" %>	
+</div>
