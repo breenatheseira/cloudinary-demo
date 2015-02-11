@@ -12,7 +12,7 @@
 			</div> 
 			<div class="panel-body">
 				<%= form_for @post do |f| %>
-				    <%= f.file_field :picture, class: "btn btn-default" %>
+				    <%= f.file_field :picture, class: "btn btn-default", accept: "image/png,image/gif,image/jpeg" %>
 				    <br/>
 				    <%= f.hidden_field :picture_cache %>
 				    <br/>
