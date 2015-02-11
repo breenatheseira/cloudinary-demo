@@ -1,6 +1,21 @@
+<script>
+  $(document).ready(function() {
+
+   var docHeight = $(window).height();
+   var footerHeight = $('#footer').height();
+   var footerTop = $('#footer').position().top + footerHeight;
+
+   if (footerTop < docHeight) {
+    $('#footer').css('margin-top', -10+ (docHeight - footerTop) + 'px');
+   }
+  });
+ </script>
+
 <% (2015 == Time.now.year) ? @year = "2015" : @year = "2015 - #{Time.now.year}" %>
-<div class="container">
-	<div class="col-md-12">
-		<center><h6>© <%= @year %> Breena M. Theseira, unless otherwise stated.</h6></center>
+<div id="footer">
+	<div class="container">
+		<div class="col-md-12">
+			<center><h6>© <%= @year %> Breena M. Theseira, unless otherwise stated.</h6></center>
+		</div>
 	</div>
 </div>
