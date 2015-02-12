@@ -1,7 +1,21 @@
-<h1>Index</h1>
-
-<% @posts.each do |p| %>
-    <%= image_tag(p.picture_url) %> &nbsp;
-<% end %>
-<br/>
-<%= link_to "New Post", new_post_path %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<h2>All Pictures</h2>
+		</div>
+		<div class="col-md-3">
+			<%= link_to "Upload Picture", new_post_path, class: "btn btn-default btn-group-justified", style: "margin-top:20px;" %>
+		</div>
+	</div>
+	<br/>
+	<div class="well">
+		<div class="row">
+			<% @posts.each do |p| %>
+				<div class="col-md-3">
+					<%= link_to "#{image_tag(p.picture_url, height: '200',class: 'thumbnail')}".html_safe, post_path(p.id)  %>
+				</div>
+			<% end %>
+		</div>
+	</div>	
+	<br/>
+</div>

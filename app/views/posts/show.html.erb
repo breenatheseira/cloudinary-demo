@@ -1,5 +1,22 @@
-<h1>Show Post <%= @post.id %></h1>
-
-<%= @post.picture_url %>
-<br/>
-<%= link_to "All Posts", posts_path %>
+<div class="container">	
+	<div class="row">
+		<div class="col-md-12">
+			<h2>Show Picture ID: <%= @post.id %></h2>
+		</div>
+	</div>
+	<br/>
+	<div class="row">
+		<div class="col-md-4">
+			<center><%= image_tag(@post.picture_url, size: '250px') %></center>
+		</div>
+		<div class="col-md-8">		
+			Date uploaded:<br/>
+			<%= @post.created_at %><br/>
+			<br/>
+			URL:<br/>
+			<%= @post.picture_url %>
+		</div>
+	</div>	
+	<br/>
+	<%= link_to "All Pictures", posts_path, class: "btn btn-default btn-group-justified" %>
+</div>
